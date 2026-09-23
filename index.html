@@ -704,6 +704,20 @@
                 margin: 0 1rem;
             }
         }
+
+        /* CTA SECTION */
+        .cta-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+        @media screen and (max-width: 991px) {
+            .cta-grid {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+        }
     </style>
 </head>
 <body class="body">
@@ -1010,6 +1024,46 @@
                             </div>
                         </div>
                     </div>
+
+            <!-- CTA STRATEGY SECTION -->
+            <section class="section" style="padding: 12rem 0; background-color: #ebebeb;">
+                <div class="container cta-grid" style="padding: 0 max(2rem, 5vw);">
+                    
+                    <!-- Left: Massive Text -->
+                    <div>
+                        <h2 class="team-heading" style="gap: 1rem; margin: 0; align-items: flex-start; text-align: left;">
+                            <div class="line-mask">
+                                <div class="team-line" style="line-height: 0.9;">BRING US THE</div>
+                            </div>
+                            <div class="line-mask">
+                                <div class="team-line" style="line-height: 0.9;">DECISION</div>
+                            </div>
+                            <div class="line-mask">
+                                <div class="team-line" style="line-height: 0.9;">YOU'RE</div>
+                            </div>
+                            <div class="line-mask">
+                                <div class="team-line" style="line-height: 0.9;">STUCK ON</div>
+                            </div>
+                        </h2>
+                    </div>
+
+                    <!-- Right: Text & Button -->
+                    <div style="max-width: 500px;">
+                        <p style="font-family: var(--text-font); font-size: 1.15rem; color: #555555; line-height: 1.6; margin-bottom: 2rem;">
+                            Not a pitch deck. Not a finished CAD file. The thing you can't work out, whether the idea is real, what it will cost to make, or why the quote came back at three times what you expected.
+                        </p>
+                        <p style="font-family: var(--text-font); font-size: 1.15rem; color: #555555; line-height: 1.6; margin-bottom: 3rem;">
+                            Free &middot; 45 minutes &middot; If we're not the right studio for you, we'll say so and tell you who is.
+                        </p>
+                        <a href="#" class="btn-launch">BOOK A STRATEGY CALL
+                            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 0.75rem;">
+                                <path d="M14 0H4V3H9.5L0 12.5L1.5 14L11 4.5V10H14V0Z" fill="white"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+            </section>
 
         </main>
         
