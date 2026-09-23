@@ -711,6 +711,11 @@
             grid-template-columns: 1.2fr 1fr;
             gap: 6rem;
         }
+        @media screen and (min-width: 992px) {
+            .cta-right-col {
+                margin-top: 25rem;
+            }
+        }
         @media screen and (max-width: 991px) {
             .cta-grid {
                 grid-template-columns: 1fr;
@@ -1047,7 +1052,7 @@
                     </div>
 
                     <!-- Right: Text & Button -->
-                    <div style="max-width: 500px; align-self: flex-end; margin-top: 4rem;">
+                    <div class="cta-right-col" style="max-width: 500px;">
                         <p style="font-family: var(--text-font); font-size: 1.15rem; color: #555555; line-height: 1.6; margin-bottom: 2rem;">
                             Not a pitch deck. Not a finished CAD file. The thing you can't work out, whether the idea is real, what it will cost to make, or why the quote came back at three times what you expected.
                         </p>
