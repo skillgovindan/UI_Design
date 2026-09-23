@@ -710,7 +710,6 @@
             display: grid;
             grid-template-columns: 1.2fr 1fr;
             gap: 6rem;
-            align-items: center;
         }
         @media screen and (max-width: 991px) {
             .cta-grid {
@@ -1030,7 +1029,7 @@
                 <div class="container cta-grid" style="padding: 0 max(2rem, 5vw);">
                     
                     <!-- Left: Massive Text -->
-                    <div>
+                    <div style="align-self: flex-start;">
                         <h2 class="team-heading" style="gap: 1rem; margin: 0; align-items: flex-start; text-align: left;">
                             <div class="line-mask">
                                 <div class="team-line" style="line-height: 0.9;">BRING US THE</div>
@@ -1048,7 +1047,7 @@
                     </div>
 
                     <!-- Right: Text & Button -->
-                    <div style="max-width: 500px;">
+                    <div style="max-width: 500px; align-self: flex-end; margin-top: 4rem;">
                         <p style="font-family: var(--text-font); font-size: 1.15rem; color: #555555; line-height: 1.6; margin-bottom: 2rem;">
                             Not a pitch deck. Not a finished CAD file. The thing you can't work out, whether the idea is real, what it will cost to make, or why the quote came back at three times what you expected.
                         </p>
