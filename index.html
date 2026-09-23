@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpecV - We Scale Ideas</title>
+    <!-- Using exact fonts from analogydesign.co: Space Grotesk for headings, Poppins for text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --body: #F7F7F7;
+            --text-font: 'Poppins', sans-serif;
+            --dark: #323232;
+            --heading-font: 'Space Grotesk', sans-serif;
+            --black: #000;
+            --gray: dimgrey;
+            --border-color: #cccccc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            background-color: var(--body);
+            font-family: var(--text-font);
+            width: 100%;
+            min-height: 100vh;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        /* ─── NAVIGATION (WITH BLUR) ─── */
+        .nav-element {
+            z-index: 99;
+            -webkit-backdrop-filter: blur(7px);
+            backdrop-filter: blur(7px);
+            background-color: #fafafa08;
+            width: 100%;
+            min-height: 5.5rem;
+            position: fixed;
+            top: 0;
+            opacity: 0; /* GSAP initial state */
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .nav-hidden {
+            transform: translateY(-100%);
+        }
+
+        .container.is-nav {
+            grid-column-gap: 1rem;
+            grid-row-gap: 1rem;
+            flex-flow: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            display: flex;
+            width: 100%;
+        }
+
+        .nav_logo {
+            font-family: var(--text-font);
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--black);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .logo-icon {
+            width: 10px;
+            height: 10px;
+            margin-left: 2px;
+            margin-top: 2px;
+        }
+
+        .w-nav-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .w-nav-menu a, .nav-cta {
+            font-family: var(--text-font);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .w-nav-menu a:hover, .nav-cta:hover {
+            color: var(--black);
+        }
+
+        /* ─── MAIN HERO ─── */
+        .page-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .main-wrapper {
+            width: 100%;
+        }
+
+        .hero_main.section {
+            z-index: 5;
+            justify-content: center;
+            align-items: center;
+            min-height: 98svh;
+            padding-top: 5.5rem;
+            padding-bottom: 0;
+            display: flex;
+            position: relative;
+        }
+
+        .container.is-hero {
+            width: 100%;
+            max-width: 100%;
+            padding: 0; /* Removed padding to fill the sides */
+        }
+
+        .hero_main_wrap {
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100svh - 5.5rem); /* Changed to min-height to prevent background cutoff */
+            padding-bottom: 3.5rem;
+            display: flex;
+            width: 100%;
+        }
+
+        .hero_main_center {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero_main_head {
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers the text block */
+            margin-top: 4rem; /* Push heading down slightly */
+        }
+
+        /* Mask wrapper for GSAP */
+        .line-mask {
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            padding-bottom: 0.05em;
+        }
+
+        /* The Exact CSS from the screenshot */
+        .heading-main {
+            font-family: var(--heading-font);
+            color: var(--black);
+            text-align: left; /* Keep left alignment to match nav */
+            text-transform: uppercase;
+            white-space: nowrap;
+            justify-content: flex-start;
+            width: 100%;
+            font-size: clamp(6rem, 18vw, 24rem); /* Dialed back scaling */
+            font-weight: 700;
+            line-height: .8;
+            display: flex;
+            margin: 0;
+            padding-left: 2rem; /* Align perfectly with nav padding */
+            padding-right: 2rem;
+            
+            /* Animation starting state */
+            transform: translateY(100%);
+        }
+
+        .hero_main_content {
+            grid-column-gap: 3rem;
+            grid-row-gap: 3rem;
+            color: var(--gray);
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+            display: flex;
+            
+            /* Animation starting state */
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .hero-subheading-text {
+            font-family: var(--text-font);
+            text-align: center;
+            max-width: 560px;
+            font-weight: 400;
+            font-size: 1.125rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* Button */
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.75rem;
+            border-radius: 0;
+            border: none;
+            background: #fff;
+            font-family: var(--text-font);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--black);
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta:hover {
+            color: #f54800;
+        }
+
+        .btn-cta:active {
+            color: #f54800;
+        }
+
+        /* ─── TEAM SECTION ─── */
+        .team_section.section {
+            background-color: #FFFFFF; /* Pure white background for this section */
+            padding: 8rem 2rem 6rem;
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+        }
+
+        .container.is-team {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 100%;
+        }
+
+        .team_content {
+            text-align: right;
+        }
+
+        .team-heading {
+            font-family: var(--heading-font);
+            font-weight: 400;
+            font-size: clamp(3rem, 6.5vw, 8.5rem);
+            line-height: 1.0;
+            color: var(--black);
+            margin: 0 0 10rem 0;
+            text-transform: uppercase;
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            transform: scaleY(1.2);
+            transform-origin: right top;
+        }
+
+        .line-mask-right {
+            justify-content: flex-end;
+            width: 100%;
+        }
+
+        .team-line {
+            transform: translateY(100%);
+            display: block;
+            text-align: right;
+        }
+
+        .text-orange {
+            color: #f54800;
+        }
+
+        .team-subheading {
+            font-family: var(--text-font);
+            font-weight: 400;
+            font-size: 1.125rem;
+            line-height: 1.6;
+            color: var(--gray);
+            margin: 0;
+        }
+
+
+
+        /* ─── RESPONSIVE ─── */
+        @media screen and (max-width: 767px) {
+            body { font-size: 1.125rem; }
+            .container.is-nav { padding: 1rem 1.5rem; }
+            .nav-element { min-height: 3.8rem; }
+            .w-nav-menu, .nav-cta { display: none; }
+            .hero_main.section { padding-top: 4rem; }
+            .hero_main_wrap { justify-content: center; height: calc(100svh - 4rem); }
+            .hero_main_head { padding-bottom: 1.5rem; }
+            .heading-main { font-size: 4.125rem; }
+            .hero_main_content { grid-column-gap: 1.5rem; grid-row-gap: 1.5rem; margin-top: 0; }
+            .hero-subheading-text { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body class="body">
+
+    <div class="page-wrapper">
+        <!-- HEADER (with fixed blur background) -->
+        <div class="nav-element w-nav" id="site-header">
+            <div class="container is-nav">
+                <a href="#" class="nav_logo">
+                    SpecV
+                    <svg class="logo-icon" viewBox="0 0 10 10">
+                        <path d="M0 0h10v10H5V5H0V0z" fill="#000"/>
+                    </svg>
+                </a>
+                <div class="w-nav-menu">
+                    <a href="#">WORK</a>
+                    <a href="#">ABOUT</a>
+                    <a href="#">SERVICES</a>
+                    <a href="#">BLOG</a>
+                </div>
+                <a href="#" class="nav-cta">WORK WITH US</a>
+            </div>
+        </div>
+
+        <!-- MAIN HERO -->
+        <main class="main-wrapper">
+            <section class="hero_main section">
+                <div class="w-layout-blockcontainer container is-hero w-container">
+                    <div class="hero_main_wrap">
+                        <div class="hero_main_center">
+                            
+                            <!-- HEADINGS -->
+                            <div class="hero_main_head">
+                                <div class="line-mask">
+                                    <h1 class="heading-main">FROM IDEA</h1>
+                                </div>
+                                <div class="line-mask">
+                                    <h1 class="heading-main text-orange">TO IMPACT</h1>
+                                </div>
+                            </div>
+
+                            <!-- SUB-HEADING & CTA -->
+                            <div class="hero_main_content" id="hero-content">
+                                <p class="hero-subheading-text">
+                                   From our workspace in Taliparamba and Kannur, we bridge the gap between engineering and education. We build custom hardware products for 50+ startups and have mentored over 1,000 students across Kerala to develop real-world tech.
+                                </p>
+                                <a href="#" class="btn-cta">
+                                    DISCUSS YOUR PRODUCT IDEA <span class="text-orange">↗</span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TEAM SECTION -->
+            <section class="team_section section">
+                <div class="w-layout-blockcontainer container is-team w-container">
+                    <div class="team_content">
+                        <div class="team-heading">
+                            <div class="line-mask line-mask-right">
+                                <div class="team-line">WE BUILD</div>
+                            </div>
+                            <div class="line-mask line-mask-right">
+                                <div class="team-line">THE HARDWARE</div>
+                            </div>
+                            <div class="line-mask line-mask-right">
+                                <div class="team-line text-orange">THAT SCALES</div>
+                            </div>
+                            <div class="line-mask line-mask-right">
+                                <div class="team-line text-orange">YOUR IDEAS.</div>
+                            </div>
+                        </div>
+                        <p class="team-subheading">
+                            Direct access to industry pros.<br>
+                            End-to-end hardware solutions under one roof.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+
+        </main>
+    </div>
+
+    <!-- GSAP Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tl = gsap.timeline();
+
+            // 1. Headline Mask Reveal
+            tl.to(".heading-main", {
+                y: "0%",
+                duration: 1.2,
+                ease: "power4.out",
+                stagger: 0.15
+            }, "+=0.2")
+
+            // 2. Sub-headline & CTA Fade Up
+            .to("#hero-content", {
+                y: 0,
+                opacity: 1,
+                duration: 1,
+                ease: "power2.out"
+            }, "-=0.5")
+
+            // 3. Nav Fade In
+            .to("#site-header", {
+                opacity: 1,
+                duration: 1,
+                ease: "power2.out"
+            }, "<"); 
+            
+            // Navbar Scroll Behavior
+            let lastScrollY = window.scrollY;
+            const nav = document.getElementById("site-header");
+            
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > lastScrollY && window.scrollY > 80) {
+                    // Scrolling down & past the top threshold
+                    nav.classList.add("nav-hidden");
+                } else {
+                    // Scrolling up
+                    nav.classList.remove("nav-hidden");
+                }
+                lastScrollY = window.scrollY;
+            }, { passive: true });
+
+            // 4. Team Section Intersection Observer
+            const teamObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        gsap.to(".team-line", {
+                            y: "0%",
+                            duration: 1.2,
+                            ease: "power4.out",
+                            stagger: 0.15
+                        });
+                        teamObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            const teamSection = document.querySelector(".team_section");
+            if (teamSection) teamObserver.observe(teamSection);
+        });
+    </script>
+</body>
+</html>
