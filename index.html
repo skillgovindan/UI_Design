@@ -301,7 +301,155 @@
             margin: 0;
         }
 
+        /* ─── PORTFOLIO SECTION ─── */
+        .portfolio_section.section {
+            background-color: #FFFFFF;
+            width: 100%;
+            overflow: hidden;
+            padding: 0;
+        }
 
+        .portfolio-track-wrap {
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #fff;
+            padding-top: 2rem;
+        }
+
+        .portfolio-intro-text {
+            font-family: var(--text-font);
+            font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+            font-weight: 400;
+            line-height: 1.4;
+            color: var(--black);
+            max-width: 1300px;
+            margin-bottom: 3rem;
+        }
+
+        .portfolio-header-fixed {
+            width: 100%;
+            padding: 0 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .btn-launch {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--black);
+            color: #ffffff;
+            font-family: var(--text-font);
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            padding: 1rem 1.75rem;
+            text-decoration: none;
+            gap: 0.75rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .btn-launch:hover {
+            opacity: 0.8;
+            color: #ffffff;
+        }
+
+        .portfolio-track {
+            display: flex;
+            gap: 2rem;
+            padding: 0 2rem;
+            width: max-content;
+            will-change: transform;
+            align-items: center;
+        }
+
+        .portfolio-item {
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .portfolio-image-wrap {
+            height: 70vh;
+            width: 70vh;
+            background-color: #e8e8e8;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            padding: 3rem;
+        }
+        
+        .portfolio-image-wrap img {
+            max-width: 60%;
+            max-height: 60%;
+            object-fit: contain;
+            transition: transform 0.6s ease;
+            mix-blend-mode: multiply;
+        }
+
+        .portfolio-item:hover .portfolio-image-wrap img {
+            transform: scale(1.04);
+        }
+
+        .hover-top-right {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            text-align: right;
+            font-family: var(--heading-font);
+            color: var(--black);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+        }
+        .hover-top-right strong {
+            font-weight: 700;
+            display: block;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            color: var(--black);
+            margin-bottom: 0.1rem;
+        }
+        .hover-top-right span {
+            font-weight: 400;
+            font-size: 1.5rem;
+            line-height: 1.1;
+            display: block;
+            color: var(--black);
+        }
+
+        .hover-bottom-left {
+            font-family: var(--heading-font);
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--black);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding-top: 1rem;
+        }
+        
+        .hover-bottom-left .text-orange {
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        .portfolio-item:hover .hover-top-right,
+        .portfolio-item:hover .hover-bottom-left {
+            opacity: 1;
+        }
 
         /* ─── RESPONSIVE ─── */
         @media screen and (max-width: 767px) {
@@ -315,6 +463,15 @@
             .heading-main { font-size: 4.125rem; }
             .hero_main_content { grid-column-gap: 1.5rem; grid-row-gap: 1.5rem; margin-top: 0; }
             .hero-subheading-text { font-size: 1rem; }
+            
+            .portfolio-image-wrap {
+                width: 85vw;
+                height: 85vw;
+                padding: 1.5rem;
+            }
+            .portfolio-header-fixed {
+                padding: 0 1rem;
+            }
         }
     </style>
 </head>
@@ -398,13 +555,119 @@
                 </div>
             </section>
 
+            <!-- INTRO TEXT SECTION -->
+            <section class="intro_text_section section" style="padding-bottom: 2rem; background: #fff;">
+                <div class="container">
+                    <h3 class="portfolio-intro-text" style="margin-bottom: 0;">
+                        SPECV Automations was founded to close the gap between academic engineering and industry-ready skills — and between great ideas and shipped products.
+                    </h3>
+                </div>
+            </section>
 
+            <!-- PORTFOLIO SECTION -->
+            <section class="portfolio_section section">
+                <div class="portfolio-track-wrap">
+                    
+                    <div class="portfolio-header-fixed" style="padding: 0;">
+                        <div class="container">
+                            <a href="#" class="btn-launch">SEE HOW WE LAUNCH 
+                                <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 0H4V3H9.5L0 12.5L1.5 14L11 4.5V10H14V0Z" fill="white"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-track">
+                        
+                        <div class="portfolio-item">
+                            <div class="portfolio-image-wrap">
+                                <!-- Product Image Goes Here -->
+                                <div class="hover-top-right">
+                                    <strong>AEROSPACE TECH</strong>
+                                    <span>Autonomous Drone</span>
+                                </div>
+                            </div>
+                            <div class="hover-bottom-left">UAV ENGINEERING <span class="text-orange">↗</span></div>
+                        </div>
+
+                        <div class="portfolio-item">
+                            <div class="portfolio-image-wrap">
+                                <!-- Product Image Goes Here -->
+                                <div class="hover-top-right">
+                                    <strong>CONSUMER DEVICE</strong>
+                                    <span>Ultra-Thin Tablet</span>
+                                </div>
+                            </div>
+                            <div class="hover-bottom-left">PRODUCT DESIGN <span class="text-orange">↗</span></div>
+                        </div>
+
+                        <div class="portfolio-item">
+                            <div class="portfolio-image-wrap">
+                                <!-- Product Image Goes Here -->
+                                <div class="hover-top-right">
+                                    <strong>GAMING HARDWARE</strong>
+                                    <span>Haptic Controller</span>
+                                </div>
+                            </div>
+                            <div class="hover-bottom-left">ERGONOMIC DESIGN <span class="text-orange">↗</span></div>
+                        </div>
+
+                        <div class="portfolio-item">
+                            <div class="portfolio-image-wrap">
+                                <!-- Product Image Goes Here -->
+                                <div class="hover-top-right">
+                                    <strong>SMART HOME</strong>
+                                    <span>Voice Assistant Speaker</span>
+                                </div>
+                            </div>
+                            <div class="hover-bottom-left">IOT INTEGRATION <span class="text-orange">↗</span></div>
+                        </div>
+
+                        <div class="portfolio-item">
+                            <div class="portfolio-image-wrap">
+                                <!-- Product Image Goes Here -->
+                                <div class="hover-top-right">
+                                    <strong>PERIPHERALS</strong>
+                                    <span>Mechanical Keyboard</span>
+                                </div>
+                            </div>
+                            <div class="hover-bottom-left">HARDWARE ENGINEERING <span class="text-orange">↗</span></div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- MANIFESTO SECTION -->
+            <section class="manifesto_section section" style="padding: 8rem 0;">
+                <div class="container" style="display: flex; flex-direction: column; align-items: flex-end; padding-right: max(2rem, 5vw);">
+                    <h2 class="team-heading" style="gap: 1.5rem; margin: 0 0 10rem 0;">
+                        <div class="line-mask line-mask-right">
+                            <div class="team-line">WE BUILD.</div>
+                        </div>
+                        <div class="line-mask line-mask-right">
+                            <div class="team-line text-orange">WE TEACH.</div>
+                        </div>
+                        <div class="line-mask line-mask-right">
+                            <div class="team-line">WE SHIP.</div>
+                        </div>
+                    </h2>
+                    <p class="team-subheading">
+                        Nobody fails because the sketch was bad.<br>
+                        They fail here.
+                    </p>
+                </div>
+            </section>
 
         </main>
     </div>
 
     <!-- GSAP Animation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const tl = gsap.timeline();
@@ -447,11 +710,13 @@
                 lastScrollY = window.scrollY;
             }, { passive: true });
 
-            // 4. Team Section Intersection Observer
+            // 4. Team & Manifesto Section Intersection Observer
             const teamObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if(entry.isIntersecting) {
-                        gsap.to(".team-line", {
+                        // Find lines inside this specific section
+                        const lines = entry.target.querySelectorAll(".team-line");
+                        gsap.to(lines, {
                             y: "0%",
                             duration: 1.2,
                             ease: "power4.out",
@@ -462,8 +727,33 @@
                 });
             }, { threshold: 0.2 });
 
-            const teamSection = document.querySelector(".team_section");
-            if (teamSection) teamObserver.observe(teamSection);
+            document.querySelectorAll(".team_section, .manifesto_section").forEach(section => {
+                teamObserver.observe(section);
+            });
+
+            // 5. Portfolio Horizontal Scroll with ScrollTrigger
+            gsap.registerPlugin(ScrollTrigger);
+
+            const portfolioTrack = document.querySelector(".portfolio-track");
+            const portfolioWrap = document.querySelector(".portfolio-track-wrap");
+
+            if (portfolioTrack && portfolioWrap) {
+                const totalScrollWidth = portfolioTrack.scrollWidth - portfolioWrap.offsetWidth;
+
+                gsap.to(portfolioTrack, {
+                    x: -totalScrollWidth,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: ".portfolio_section",
+                        start: "top top",
+                        end: () => "+=" + (totalScrollWidth + window.innerWidth),
+                        scrub: 1,
+                        pin: true,
+                        anticipatePin: 1,
+                        invalidateOnRefresh: true,
+                    }
+                });
+            }
         });
     </script>
 </body>
