@@ -473,6 +473,71 @@
                 padding: 0 1rem;
             }
         }
+        /* ─── SERVICES GRID SECTION ─── */
+        .services-grid-section {
+            background-color: #f3f3f3;
+            padding: 8rem 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem 4rem;
+        }
+
+        @media screen and (max-width: 767px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+        }
+
+        .service-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .service-number {
+            font-family: var(--heading-font);
+            font-size: clamp(5rem, 8vw, 8rem);
+            font-weight: 500;
+            color: var(--orange);
+            line-height: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-text {
+            font-family: var(--text-font);
+            font-size: 1.25rem;
+            line-height: 1.5;
+            color: #555555;
+        }
+        
+        .service-text strong {
+            color: var(--black);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            font-family: var(--text-font);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--black);
+            text-decoration: none;
+            border-bottom: 2px solid var(--black);
+            padding-bottom: 0.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .service-link:hover {
+            color: var(--orange);
+            border-bottom-color: var(--orange);
+        }
     </style>
 </head>
 <body class="body">
@@ -657,6 +722,54 @@
                         Nobody fails because the sketch was bad.<br>
                         They fail here.
                     </p>
+                </div>
+            </section>
+
+            <!-- SERVICES GRID SECTION -->
+            <section class="services-grid-section section">
+                <div class="container">
+                    <div class="services-grid">
+                        
+                        <!-- 01 -->
+                        <div class="service-item">
+                            <div class="service-number">01</div>
+                            <div class="service-text">
+                                <strong>Electronics, Robotics and IoT Product development</strong>
+                                End-to-end hardware design, firmware, and IoT connectivity — from ideation to prototype.
+                            </div>
+                            <a href="https://specv-web-temp.vercel.app/service/electronics" class="service-link">Enquire Now ↗</a>
+                        </div>
+
+                        <!-- 02 -->
+                        <div class="service-item">
+                            <div class="service-number">02</div>
+                            <div class="service-text">
+                                <strong>PCB designing and assembly</strong>
+                                Professional PCB layout design, schematic capture, and full SMD assembly with quality inspection.
+                            </div>
+                            <a href="https://specv-web-temp.vercel.app/service/pcb" class="service-link">Enquire Now ↗</a>
+                        </div>
+
+                        <!-- 03 -->
+                        <div class="service-item">
+                            <div class="service-number">03</div>
+                            <div class="service-text">
+                                <strong>3D designing, 3D printing</strong>
+                                Rapid prototyping and custom enclosure fabrication using advanced 3D modelling and printing.
+                            </div>
+                            <a href="https://specv-web-temp.vercel.app/service/3d-printing" class="service-link">Enquire Now ↗</a>
+                        </div>
+
+                        <!-- 04 -->
+                        <div class="service-item">
+                            <div class="service-number">04</div>
+                            <div class="service-text">
+                                <strong>College project guidance</strong>
+                                Comprehensive mentoring for final-year projects — from topic selection to report writing.
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </section>
 
