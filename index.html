@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,8 @@
             --heading-font: 'Space Grotesk', sans-serif;
             --black: #000;
             --gray: dimgrey;
-            --border-color: #cccccc;
+            
+            --blue: #1455D9;
         }
 
         * {
@@ -34,7 +35,7 @@
             overflow-x: hidden;
         }
 
-        /* ─── NAVIGATION (WITH BLUR) ─── */
+        /* --- NAVIGATION (WITH BLUR) --- */
         .nav-element {
             z-index: 99;
             -webkit-backdrop-filter: blur(7px);
@@ -104,7 +105,7 @@
             color: var(--black);
         }
 
-        /* ─── MAIN HERO ─── */
+        /* --- MAIN HERO --- */
         .page-wrapper {
             display: flex;
             flex-direction: column;
@@ -234,14 +235,14 @@
         }
 
         .btn-cta:hover {
-            color: #f54800;
+            color: #1455D9;
         }
 
         .btn-cta:active {
-            color: #f54800;
+            color: #1455D9;
         }
 
-        /* ─── TEAM SECTION ─── */
+        /* --- TEAM SECTION --- */
         .team_section.section {
             background-color: #FFFFFF; /* Pure white background for this section */
             padding: 8rem 2rem 6rem;
@@ -288,8 +289,8 @@
             text-align: right;
         }
 
-        .text-orange {
-            color: #f54800;
+        .text-blue {
+            color: #1455D9;
         }
 
         .team-subheading {
@@ -301,7 +302,7 @@
             margin: 0;
         }
 
-        /* ─── PORTFOLIO SECTION ─── */
+        /* --- PORTFOLIO SECTION --- */
         .portfolio_section.section {
             background-color: #FFFFFF;
             width: 100%;
@@ -357,6 +358,8 @@
             opacity: 0.8;
             color: #ffffff;
         }
+        div.btn-launch:hover { opacity: 1; }
+        div.btn-launch { cursor: default; }
 
         .portfolio-track {
             display: flex;
@@ -404,7 +407,7 @@
             right: 2rem;
             text-align: right;
             font-family: var(--heading-font);
-            color: var(--black);
+            color: #ffffff;
             opacity: 0;
             transition: opacity 0.3s ease;
             z-index: 2;
@@ -415,7 +418,7 @@
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 0.02em;
-            color: var(--black);
+            color: #ffffff;
             margin-bottom: 0.1rem;
         }
         .hover-top-right span {
@@ -423,7 +426,7 @@
             font-size: 1.5rem;
             line-height: 1.1;
             display: block;
-            color: var(--black);
+            color: #ffffff;
         }
 
         .hover-bottom-left {
@@ -441,7 +444,7 @@
             padding-top: 1rem;
         }
         
-        .hover-bottom-left .text-orange {
+        .hover-bottom-left .text-blue {
             font-weight: 800;
             font-size: 1.1rem;
         }
@@ -451,8 +454,9 @@
             opacity: 1;
         }
 
-        /* ─── RESPONSIVE ─── */
+        /* --- RESPONSIVE --- */
         @media screen and (max-width: 767px) {
+            .footer-bottom-bar { flex-direction: column-reverse !important; align-items: flex-start !important; gap: 1rem !important; }
             body { font-size: 1.125rem; }
             .container.is-nav { padding: 1rem 1.5rem; }
             .nav-element { min-height: 3.8rem; }
@@ -473,7 +477,7 @@
                 padding: 0 1rem;
             }
         }
-        /* ─── SERVICES GRID SECTION ─── */
+        /* --- SERVICES GRID SECTION --- */
         .services-grid-section {
             background-color: #ebebeb;
             padding: 8rem 0;
@@ -488,6 +492,7 @@
         }
 
         @media screen and (max-width: 767px) {
+            .footer-bottom-bar { flex-direction: column-reverse !important; align-items: flex-start !important; gap: 1rem !important; }
             .services-grid {
                 grid-template-columns: 1fr;
                 gap: 4rem;
@@ -504,7 +509,7 @@
             font-family: var(--heading-font);
             font-size: clamp(5rem, 8vw, 8rem);
             font-weight: 400;
-            color: #ff4500;
+            color: #1455D9;
             line-height: 1;
             margin-bottom: 1.25rem;
         }
@@ -530,7 +535,7 @@
             color: inherit;
             text-decoration: none;
         }
-        /* ─── FOOTER SECTION ─── */
+        /* --- FOOTER SECTION --- */
         .footer-section {
             background-color: #111111;
             color: #ffffff;
@@ -555,9 +560,9 @@
 
         .footer-container {
             position: relative;
-            z-index: 1;
+            z-index: 0;
             display: flex;
-            flex-direction: column;
+            flex-direction: column; padding: 0 max(2rem, 5vw);
         }
 
         .footer-top {
@@ -578,6 +583,7 @@
         }
 
         @media screen and (max-width: 767px) {
+            .footer-bottom-bar { flex-direction: column-reverse !important; align-items: flex-start !important; gap: 1rem !important; }
             .footer-top {
                 grid-template-columns: 1fr;
             }
@@ -620,7 +626,7 @@
         }
         
         .footer-contact-link:hover {
-            color: var(--orange);
+            color: var(--blue);
         }
 
         .footer-heading {
@@ -665,7 +671,7 @@
         }
 
         .footer-socials a:hover {
-            color: var(--orange);
+            color: var(--blue);
         }
 
         .footer-bottom {
@@ -690,6 +696,7 @@
         }
         
         @media screen and (max-width: 767px) {
+            .footer-bottom-bar { flex-direction: column-reverse !important; align-items: flex-start !important; gap: 1rem !important; }
             .footer-socials {
                 flex-direction: column;
                 gap: 1.5rem;
@@ -759,7 +766,7 @@
                                     <h1 class="heading-main">FROM IDEA</h1>
                                 </div>
                                 <div class="line-mask">
-                                    <h1 class="heading-main text-orange">TO IMPACT</h1>
+                                    <h1 class="heading-main text-blue">TO IMPACT</h1>
                                 </div>
                             </div>
 
@@ -769,7 +776,7 @@
                                    From our workspace in Taliparamba and Kannur, we bridge the gap between engineering and education. We build custom hardware products for 50+ startups and have mentored over 1,000 students across Kerala to develop real-world tech.
                                 </p>
                                 <a href="#" class="btn-cta">
-                                    DISCUSS YOUR PRODUCT IDEA <span class="text-orange">↗</span>
+                                    DISCUSS YOUR PRODUCT IDEA <span class="text-blue">?</span>
                                 </a>
                             </div>
 
@@ -790,10 +797,10 @@
                                 <div class="team-line">THE HARDWARE</div>
                             </div>
                             <div class="line-mask line-mask-right">
-                                <div class="team-line text-orange">THAT SCALES</div>
+                                <div class="team-line text-blue">THAT SCALES</div>
                             </div>
                             <div class="line-mask line-mask-right">
-                                <div class="team-line text-orange">YOUR IDEAS.</div>
+                                <div class="team-line text-blue">YOUR IDEAS.</div>
                             </div>
                         </div>
                         <p class="team-subheading">
@@ -806,9 +813,9 @@
 
             <!-- INTRO TEXT SECTION -->
             <section class="intro_text_section section" style="padding-bottom: 2rem; background: #fff;">
-                <div style="padding: 0 5vw;">
+                <div style="padding: 0 max(1.5rem, 5vw);">
                     <h3 class="portfolio-intro-text" style="margin-bottom: 0;">
-                        SPECV Automations was founded to close the gap between academic engineering and industry-ready skills — and between great ideas and shipped products.
+                        SPECV Automations was founded to close the gap between academic engineering and industry-ready skills - and between great ideas and shipped products.
                     </h3>
                 </div>
             </section>
@@ -817,71 +824,87 @@
             <section class="portfolio_section section">
                 <div class="portfolio-track-wrap">
                     
-                    <div class="portfolio-header-fixed" style="padding: 0 5vw; margin-bottom: 3rem;">
-                        <a href="#" class="btn-launch">SEE HOW WE LAUNCH 
+                    <div class="portfolio-header-fixed" style="padding: 0 max(1.5rem, 5vw); margin-bottom: 3rem;">
+                        <div class="btn-launch">WHAT WE DO 
                             <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14 0H4V3H9.5L0 12.5L1.5 14L11 4.5V10H14V0Z" fill="white"/>
                             </svg>
-                        </a>
+                        </div>
                     </div>
 
                     <div class="portfolio-track">
-                        
                         <div class="portfolio-item">
-                            <div class="portfolio-image-wrap">
-                                <!-- Product Image Goes Here -->
-                                <div class="hover-top-right">
-                                    <strong>AEROSPACE TECH</strong>
-                                    <span>Autonomous Drone</span>
+                            <div class="portfolio-image-wrap" style="border-radius: 1.25rem; overflow: hidden;">
+                                <img src="images/portfolio_1.jpg" style="width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; mix-blend-mode: normal; z-index: 0; filter: brightness(0.45);" alt="img1">
+                                
+                                <div style="position: absolute; top: 1.5rem; right: 1.5rem; background: rgba(0,0,0,0.6); padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 700; color: white; z-index: 2; font-family: var(--heading-font); font-size: 0.9rem;">01</div>
+                                
+                                <div style="position: absolute; bottom: 2rem; left: 2rem; text-align: left; max-width: 85%; z-index: 2;">
+                                    <strong style="font-family: var(--heading-font); font-size: 1.4rem; font-weight: 800; text-transform: uppercase; display: block; margin-bottom: 0.75rem; color: #ffffff; letter-spacing: 0;">Electronics, Robotics and IoT Product development</strong>
+                                    <p style="font-family: var(--text-font); font-size: 0.95rem; margin: 0; text-transform: none; line-height: 1.5; color: #e0e0e0; font-weight: 400;">End-to-end hardware design, firmware, and IoT connectivity - from ideation to prototype.</p>
                                 </div>
                             </div>
-                            <div class="hover-bottom-left">UAV ENGINEERING <span class="text-orange">↗</span></div>
                         </div>
-
                         <div class="portfolio-item">
-                            <div class="portfolio-image-wrap">
-                                <!-- Product Image Goes Here -->
-                                <div class="hover-top-right">
-                                    <strong>CONSUMER DEVICE</strong>
-                                    <span>Ultra-Thin Tablet</span>
+                            <div class="portfolio-image-wrap" style="border-radius: 1.25rem; overflow: hidden;">
+                                <img src="images/portfolio_2.jpg" style="width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; mix-blend-mode: normal; z-index: 0; filter: brightness(0.45);" alt="img2">
+                                
+                                <div style="position: absolute; top: 1.5rem; right: 1.5rem; background: rgba(0,0,0,0.6); padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 700; color: white; z-index: 2; font-family: var(--heading-font); font-size: 0.9rem;">02</div>
+                                
+                                <div style="position: absolute; bottom: 2rem; left: 2rem; text-align: left; max-width: 85%; z-index: 2;">
+                                    <strong style="font-family: var(--heading-font); font-size: 1.4rem; font-weight: 800; text-transform: uppercase; display: block; margin-bottom: 0.75rem; color: #ffffff; letter-spacing: 0;">PCB designing and assembly</strong>
+                                    <p style="font-family: var(--text-font); font-size: 0.95rem; margin: 0; text-transform: none; line-height: 1.5; color: #e0e0e0; font-weight: 400;">Professional PCB layout design, schematic capture, and full SMD assembly with quality inspection.</p>
                                 </div>
                             </div>
-                            <div class="hover-bottom-left">PRODUCT DESIGN <span class="text-orange">↗</span></div>
                         </div>
-
                         <div class="portfolio-item">
-                            <div class="portfolio-image-wrap">
-                                <!-- Product Image Goes Here -->
-                                <div class="hover-top-right">
-                                    <strong>GAMING HARDWARE</strong>
-                                    <span>Haptic Controller</span>
+                            <div class="portfolio-image-wrap" style="border-radius: 1.25rem; overflow: hidden;">
+                                <img src="images/portfolio_3.jpg" style="width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; mix-blend-mode: normal; z-index: 0; filter: brightness(0.45);" alt="img3">
+                                
+                                <div style="position: absolute; top: 1.5rem; right: 1.5rem; background: rgba(0,0,0,0.6); padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 700; color: white; z-index: 2; font-family: var(--heading-font); font-size: 0.9rem;">03</div>
+                                
+                                <div style="position: absolute; bottom: 2rem; left: 2rem; text-align: left; max-width: 85%; z-index: 2;">
+                                    <strong style="font-family: var(--heading-font); font-size: 1.4rem; font-weight: 800; text-transform: uppercase; display: block; margin-bottom: 0.75rem; color: #ffffff; letter-spacing: 0;">3D designing, 3D printing</strong>
+                                    <p style="font-family: var(--text-font); font-size: 0.95rem; margin: 0; text-transform: none; line-height: 1.5; color: #e0e0e0; font-weight: 400;">Rapid prototyping and custom enclosure fabrication using advanced 3D modelling and printing.</p>
                                 </div>
                             </div>
-                            <div class="hover-bottom-left">ERGONOMIC DESIGN <span class="text-orange">↗</span></div>
                         </div>
-
                         <div class="portfolio-item">
-                            <div class="portfolio-image-wrap">
-                                <!-- Product Image Goes Here -->
-                                <div class="hover-top-right">
-                                    <strong>SMART HOME</strong>
-                                    <span>Voice Assistant Speaker</span>
+                            <div class="portfolio-image-wrap" style="border-radius: 1.25rem; overflow: hidden;">
+                                <img src="images/portfolio_4.jpg" style="width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; mix-blend-mode: normal; z-index: 0; filter: brightness(0.45);" alt="img4">
+                                
+                                <div style="position: absolute; top: 1.5rem; right: 1.5rem; background: rgba(0,0,0,0.6); padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 700; color: white; z-index: 2; font-family: var(--heading-font); font-size: 0.9rem;">04</div>
+                                
+                                <div style="position: absolute; bottom: 2rem; left: 2rem; text-align: left; max-width: 85%; z-index: 2;">
+                                    <strong style="font-family: var(--heading-font); font-size: 1.4rem; font-weight: 800; text-transform: uppercase; display: block; margin-bottom: 0.75rem; color: #ffffff; letter-spacing: 0;">College project guidance</strong>
+                                    <p style="font-family: var(--text-font); font-size: 0.95rem; margin: 0; text-transform: none; line-height: 1.5; color: #e0e0e0; font-weight: 400;">Comprehensive mentoring for final-year projects - from topic selection to report writing.</p>
                                 </div>
                             </div>
-                            <div class="hover-bottom-left">IOT INTEGRATION <span class="text-orange">↗</span></div>
                         </div>
-
                         <div class="portfolio-item">
-                            <div class="portfolio-image-wrap">
-                                <!-- Product Image Goes Here -->
-                                <div class="hover-top-right">
-                                    <strong>PERIPHERALS</strong>
-                                    <span>Mechanical Keyboard</span>
+                            <div class="portfolio-image-wrap" style="border-radius: 1.25rem; overflow: hidden;">
+                                <img src="images/portfolio_5.jpg" style="width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; mix-blend-mode: normal; z-index: 0; filter: brightness(0.45);" alt="img5">
+                                
+                                <div style="position: absolute; top: 1.5rem; right: 1.5rem; background: rgba(0,0,0,0.6); padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 700; color: white; z-index: 2; font-family: var(--heading-font); font-size: 0.9rem;">05</div>
+                                
+                                <div style="position: absolute; bottom: 2rem; left: 2rem; text-align: left; max-width: 85%; z-index: 2;">
+                                    <strong style="font-family: var(--heading-font); font-size: 1.4rem; font-weight: 800; text-transform: uppercase; display: block; margin-bottom: 0.75rem; color: #ffffff; letter-spacing: 0;">Tech Courses</strong>
+                                    <p style="font-family: var(--text-font); font-size: 0.95rem; margin: 0; text-transform: none; line-height: 1.5; color: #e0e0e0; font-weight: 400;">Structured online and offline courses on Embedded Systems, Robotics, IoT, and PCB Design.</p>
                                 </div>
                             </div>
-                            <div class="hover-bottom-left">HARDWARE ENGINEERING <span class="text-orange">↗</span></div>
                         </div>
-
+                        <div class="portfolio-item">
+                            <div class="portfolio-image-wrap" style="border-radius: 1.25rem; overflow: hidden;">
+                                <img src="images/portfolio_6.jpg" style="width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; mix-blend-mode: normal; z-index: 0; filter: brightness(0.45);" alt="img6">
+                                
+                                <div style="position: absolute; top: 1.5rem; right: 1.5rem; background: rgba(0,0,0,0.6); padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 700; color: white; z-index: 2; font-family: var(--heading-font); font-size: 0.9rem;">06</div>
+                                
+                                <div style="position: absolute; bottom: 2rem; left: 2rem; text-align: left; max-width: 85%; z-index: 2;">
+                                    <strong style="font-family: var(--heading-font); font-size: 1.4rem; font-weight: 800; text-transform: uppercase; display: block; margin-bottom: 0.75rem; color: #ffffff; letter-spacing: 0;">Hands-on workshops</strong>
+                                    <p style="font-family: var(--text-font); font-size: 0.95rem; margin: 0; text-transform: none; line-height: 1.5; color: #e0e0e0; font-weight: 400;">Immersive workshops for colleges and corporates combining theory with real-world experience.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -890,13 +913,13 @@
 
             <!-- MANIFESTO SECTION -->
             <section class="manifesto_section section" style="padding: 8rem 0;">
-                <div class="container" style="display: flex; flex-direction: column; align-items: flex-end; padding-right: max(2rem, 5vw);">
+                <div class="container" style="display: flex; flex-direction: column; align-items: flex-end; padding: 0 max(1.5rem, 5vw);">
                     <h2 class="team-heading" style="gap: 1.5rem; margin: 0 0 10rem 0;">
                         <div class="line-mask line-mask-right">
                             <div class="team-line">WE BUILD.</div>
                         </div>
                         <div class="line-mask line-mask-right">
-                            <div class="team-line text-orange">WE TEACH.</div>
+                            <div class="team-line text-blue">WE TEACH.</div>
                         </div>
                         <div class="line-mask line-mask-right">
                             <div class="team-line">WE SHIP.</div>
@@ -912,13 +935,11 @@
             <!-- SERVICES GRID SECTION -->
             <section class="services-grid-section section">
 
-                <div class="container">
+                <div class="container" style="padding: 0 max(1.5rem, 5vw);">
                     <div style="max-width: 1000px; margin: 0 auto; margin-bottom: 4rem;">
-                        <a href="#" class="btn-launch">OUR SERVICE
-                            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div class="btn-launch">OUR PROCESS <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14 0H4V3H9.5L0 12.5L1.5 14L11 4.5V10H14V0Z" fill="white"/>
-                            </svg>
-                        </a>
+                            </svg></div>
                     </div>
                     <div class="services-grid">
                         
@@ -926,8 +947,8 @@
                         <div class="service-item">
                             <div class="service-number">01</div>
                             <div class="service-text">
-                                <strong>Electronics, Robotics and IoT Product development</strong>
-                                End-to-end hardware design, firmware, and IoT connectivity — from ideation to prototype.
+                                <strong>Discover</strong>
+                                Understanding your requirements, feasibility analysis, and planning.
                             </div>
                         </div>
 
@@ -935,8 +956,8 @@
                         <div class="service-item">
                             <div class="service-number">02</div>
                             <div class="service-text">
-                                <strong>PCB designing and assembly</strong>
-                                Professional PCB layout design, schematic capture, and full SMD assembly with quality inspection.
+                                <strong>Design</strong>
+                                Creating schematics, PCB layouts, and 3D models for your product.
                             </div>
                         </div>
 
@@ -944,8 +965,8 @@
                         <div class="service-item">
                             <div class="service-number">03</div>
                             <div class="service-text">
-                                <strong>3D designing, 3D printing</strong>
-                                Rapid prototyping and custom enclosure fabrication using advanced 3D modelling and printing.
+                                <strong>Develop</strong>
+                                Prototyping, firmware coding, assembly, and rigorous testing.
                             </div>
                         </div>
 
@@ -953,8 +974,8 @@
                         <div class="service-item">
                             <div class="service-number">04</div>
                             <div class="service-text">
-                                <strong>College project guidance</strong>
-                                Comprehensive mentoring for final-year projects — from topic selection to report writing.
+                                <strong>Deliver</strong>
+                                Handing over the final polished product with full documentation.
                             </div>
                         </div>
 
@@ -975,7 +996,7 @@
                                 <div class="team-line" style="line-height: 0.85;">YOU SHOULD</div>
                             </div>
                             <div class="line-mask line-mask-right">
-                                <div class="team-line text-orange" style="line-height: 0.85;">CHOOSE US</div>
+                                <div class="team-line text-blue" style="line-height: 0.85;">CHOOSE US</div>
                             </div>
                             <div class="line-mask line-mask-right">
                                 <div class="team-line" style="line-height: 0.85;">TO BUILD</div>
@@ -996,7 +1017,7 @@
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 4rem 6rem; width: 100%; text-align: left;">
                             <div>
                                 <div style="font-family: var(--heading-font); font-size: 1.35rem; font-weight: 700; color: var(--black); margin-bottom: 0.75rem;">
-                                    <span class="text-orange" style="margin-right: 0.5rem; font-size: 1rem;">01 /</span> Expert mentorship from industry professionals
+                                    <span class="text-blue" style="margin-right: 0.5rem; font-size: 1rem;">01 /</span> Expert mentorship from industry professionals
                                 </div>
                                 <p style="font-family: var(--text-font); font-size: 1rem; color: #666666; line-height: 1.6; margin: 0;">
                                     Our seasoned engineers and designers bring years of real-world manufacturing and startup experience to guide your project confidently from day one.
@@ -1004,15 +1025,15 @@
                             </div>
                             <div>
                                 <div style="font-family: var(--heading-font); font-size: 1.35rem; font-weight: 700; color: var(--black); margin-bottom: 0.75rem;">
-                                    <span class="text-orange" style="margin-right: 0.5rem; font-size: 1rem;">02 /</span> Comprehensive end-to-end product development
+                                    <span class="text-blue" style="margin-right: 0.5rem; font-size: 1rem;">02 /</span> Comprehensive end-to-end product development
                                 </div>
                                 <p style="font-family: var(--text-font); font-size: 1rem; color: #666666; line-height: 1.6; margin: 0;">
-                                    We handle everything in-house — from initial concept sketching and schematic capture to custom firmware, prototyping, and final DFM scaling.
+                                    We handle everything in-house � from initial concept sketching and schematic capture to custom firmware, prototyping, and final DFM scaling.
                                 </p>
                             </div>
                             <div>
                                 <div style="font-family: var(--heading-font); font-size: 1.35rem; font-weight: 700; color: var(--black); margin-bottom: 0.75rem;">
-                                    <span class="text-orange" style="margin-right: 0.5rem; font-size: 1rem;">03 /</span> State-of-the-art tools and technologies
+                                    <span class="text-blue" style="margin-right: 0.5rem; font-size: 1rem;">03 /</span> State-of-the-art tools and technologies
                                 </div>
                                 <p style="font-family: var(--text-font); font-size: 1rem; color: #666666; line-height: 1.6; margin: 0;">
                                     We leverage advanced 3D printing, high-speed SMD assembly, and cutting-edge IoT connectivity frameworks to build hardware that performs reliably.
@@ -1020,7 +1041,7 @@
                             </div>
                             <div>
                                 <div style="font-family: var(--heading-font); font-size: 1.35rem; font-weight: 700; color: var(--black); margin-bottom: 0.75rem;">
-                                    <span class="text-orange" style="margin-right: 0.5rem; font-size: 1rem;">04 /</span> Proven track record of success across Kerala
+                                    <span class="text-blue" style="margin-right: 0.5rem; font-size: 1rem;">04 /</span> Proven track record of success across Kerala
                                 </div>
                                 <p style="font-family: var(--text-font); font-size: 1rem; color: #666666; line-height: 1.6; margin: 0;">
                                     We have successfully delivered dozens of commercial products and academic projects, empowering local innovators to ship with absolute confidence.
@@ -1033,17 +1054,17 @@
 
 
             <!-- CTA STRATEGY SECTION -->
-            <section class="section" style="padding: 12rem 0; background-color: #ebebeb; background-image: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(255, 120, 50, 0.25) 0%, rgba(235, 235, 235, 0) 100%);">
+            <section class="section manifesto_section" style="padding: 12rem 0; background-color: #ebebeb; background-image: radial-gradient(ellipse 60% 40% at 50% 100%, rgba(20, 85, 217, 0.15) 0%, rgba(235, 235, 235, 0) 100%);">
                 <div class="container cta-grid" style="padding: 0 max(2rem, 5vw);">
                     
                     <!-- Left: Massive Text -->
                     <div style="align-self: flex-start; width: 100%;">
                         <h2 style="font-family: var(--heading-font); font-size: clamp(3.5rem, 8vw, 8rem); font-weight: 700; color: var(--black); text-transform: uppercase; letter-spacing: -0.02em; display: flex; flex-direction: column; align-items: flex-start; text-align: left; width: 100%; gap: 1rem; margin: 0;">
-                            <div style="line-height: 0.9;">BRING US</div>
-                            <div style="line-height: 0.9;">THE</div>
-                            <div style="line-height: 0.9;">DECISION</div>
-                            <div style="line-height: 0.9;">YOU'RE</div>
-                            <div style="line-height: 0.9;">STUCK ON</div>
+                            <div class="line-mask"><div class="team-line" style="text-align: left; line-height: 0.9;">BRING US</div></div>
+                            <div class="line-mask"><div class="team-line" style="text-align: left; line-height: 0.9;">THE</div></div>
+                            <div class="line-mask"><div class="team-line" style="text-align: left; line-height: 0.9;">DECISION</div></div>
+                            <div class="line-mask"><div class="team-line" style="text-align: left; line-height: 0.9;">YOU'RE</div></div>
+                            <div class="line-mask"><div class="team-line" style="text-align: left; line-height: 0.9;">STUCK ON</div></div>
                         </h2>
                     </div>
 
@@ -1065,67 +1086,88 @@
         </main>
         
         <!-- FOOTER SECTION -->
-        <footer class="footer-section">
-            <div class="footer-huge-text">SpecV</div>
-            <div class="container footer-container">
-                <div class="footer-top">
-                    <div class="footer-col brand-col">
-                        <a href="#" class="footer-logo">SpecV
-                            <svg class="logo-icon" viewBox="0 0 10 10" style="width:12px; height:12px; margin-left:2px; vertical-align:top;">
-                                <path d="M0 0h10v10H5V5H0V0z" fill="#fff"/>
-                            </svg>
-                        </a>
-                        <p class="footer-desc">End-to-end hardware design, firmware, and IoT connectivity for startups and students.</p>
-                        <a href="mailto:business@specv.com" class="footer-contact-link">
-                            <span class="text-orange" style="font-size: 1.2rem; line-height: 1;">&#8600;</span> business@specv.com
-                        </a>
-                        <a href="tel:+919876543210" class="footer-contact-link">
-                            <span class="text-orange" style="font-size: 1.2rem; line-height: 1;">&#8600;</span> +91 9876543210
-                        </a>
-                    </div>
-                    
-                    <div class="footer-col">
-                        <h4 class="footer-heading">QUICK LINKS</h4>
-                        <a href="#" class="footer-link">Home</a>
-                        <a href="#" class="footer-link">About</a>
-                        <a href="#" class="footer-link">Services</a>
-                        <a href="#" class="footer-link">Work</a>
-                        <a href="#" class="footer-link">Blog</a>
-                    </div>
+<footer class="footer-new" style="background-color: #000000; padding: 6rem 5vw 2rem; font-family: var(--text-font); color: #ffffff; border-top: 1px solid #222222;">
+    <style>
 
-                    <div class="footer-col">
-                        <h4 class="footer-heading">SERVICES</h4>
-                        <a href="#" class="footer-link">Electronics & IoT</a>
-                        <a href="#" class="footer-link">PCB Designing</a>
-                        <a href="#" class="footer-link">3D Printing</a>
-                        <a href="#" class="footer-link">Project Guidance</a>
-                    </div>
-
-                    <div class="footer-col">
-                        <h4 class="footer-heading">CONTACT</h4>
-                        <a href="#" class="footer-link">Work With Us</a>
-                        <a href="#" class="footer-link">Reach Out</a>
-                        <a href="#" class="footer-link">Careers</a>
-                        <a href="#" class="footer-link">FAQ</a>
-                    </div>
+        .footer-new a { transition: all 0.2s ease; }
+        .footer-new a[style*="color: #999999"]:hover { color: #ffffff !important; }
+        
+    
+        @media screen and (max-width: 767px) {
+            .footer-bottom-bar { flex-direction: column-reverse !important; align-items: flex-start !important; gap: 1rem !important; }
+            .footer-columns { flex-direction: column !important; gap: 2rem !important; }
+            .footer-new { padding: 4rem 1.5rem 2rem !important; }
+        }
+    </style>
+    <div style="width: 100%;">
+        <!-- Top Section -->
+        <div class="footer-columns" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 3rem; margin-bottom: 4rem;">
+            
+            <!-- Logo & About Column -->
+            <div style="flex: 2; min-width: 280px; display: flex; flex-direction: column; gap: 1.25rem;">
+                <div style="font-family: var(--heading-font); font-size: 2rem; color: #ffffff; font-weight: 800; display: flex; align-items: center; cursor: default;">
+                    SpecV
+                    <svg class="logo-icon" viewBox="0 0 10 10" style="width:16px; height:16px; margin-left:4px; vertical-align:middle;">
+                        <path d="M0 0h10v10H5V5H0V0z" fill="#1455D9"/>
+                    </svg>
                 </div>
+                <p style="color: #999999; font-size: 0.95rem; line-height: 1.6; max-width: 90%; margin: 0;">
+                    End-to-end hardware design, firmware, and IoT connectivity for startups and students.
+                </p>
+            </div>
 
-                <div class="footer-socials">
-                    <a href="#">Instagram</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">YouTube</a>
-                </div>
-
-                <div class="footer-bottom">
-                    <div class="footer-copy">© 2026 SpecV Automations. All rights reserved.</div>
-                    <div class="footer-legal">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms and Conditions</a>
-                    </div>
+            <!-- Quick Links Column -> Now EXPLORE -->
+            <div style="flex: 1; min-width: 150px;">
+                <h4 style="font-family: var(--text-font); font-size: 0.9rem; font-weight: 600; color: #ffffff; letter-spacing: 0.1em; margin: 0 0 1.5rem 0; text-transform: uppercase;">EXPLORE</h4>
+                <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                    <a href="#" style="color: #999999; text-decoration: none; font-size: 0.95rem;">Home</a>
+                    <a href="#" style="color: #999999; text-decoration: none; font-size: 0.95rem;">About</a>
+                    <a href="#" style="color: #999999; text-decoration: none; font-size: 0.95rem;">Services</a>
+                    <a href="#" style="color: #999999; text-decoration: none; font-size: 0.95rem;">Work</a>
+                    <a href="#" style="color: #999999; text-decoration: none; font-size: 0.95rem;">Blog</a>
                 </div>
             </div>
-        </footer>
+
+            <!-- Services Column -->
+            <div style="flex: 1; min-width: 150px;">
+                <h4 style="font-family: var(--text-font); font-size: 0.9rem; font-weight: 600; color: #ffffff; letter-spacing: 0.1em; margin: 0 0 1.5rem 0; text-transform: uppercase;">SERVICES</h4>
+                <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                    <a href="#" style="color: #999999; text-decoration: none; font-size: 0.95rem;">Electronics & IoT</a>
+                    <a href="#" style="color: #999999; text-decoration: none; font-size: 0.95rem;">PCB Designing</a>
+                    <a href="#" style="color: #999999; text-decoration: none; font-size: 0.95rem;">3D Printing</a>
+                    <a href="#" style="color: #999999; text-decoration: none; font-size: 0.95rem;">Project Guidance</a>
+                    <a href="#" style="color: #999999; text-decoration: none; font-size: 0.95rem;">Tech Courses</a>
+                    <a href="#" style="color: #999999; text-decoration: none; font-size: 0.95rem;">Hands-on workshops</a>
+                </div>
+            </div>
+
+            <!-- Contact Column -->
+            <div style="flex: 1; min-width: 220px;">
+                <h4 style="font-family: var(--text-font); font-size: 0.9rem; font-weight: 600; color: #ffffff; letter-spacing: 0.1em; margin: 0 0 1.5rem 0; text-transform: uppercase;">CONTACT</h4>
+                <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                    <span style="color: #999999; font-size: 0.95rem; line-height: 1.5;">SPECV AUTOMATIONS, Vellavu,<br>TALIPARAMBA, Kuttiyeri,<br>Kerala 670142</span>
+                    <a href="tel:+918156955380" style="color: #999999; text-decoration: none; font-size: 0.95rem;">+91 8156955380</a>
+                    <a href="mailto:specvprojects@gmail.com" style="color: #999999; text-decoration: none; font-size: 0.95rem;">specvprojects@gmail.com</a>
+                    <a href="#" style="color: #999999; text-decoration: none; font-size: 0.95rem;">Work With Us</a>
+                    <a href="#" style="color: #999999; text-decoration: none; font-size: 0.95rem;">Careers</a>
+                    <a href="#" style="color: #999999; text-decoration: none; font-size: 0.95rem;">FAQ</a>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="footer-bottom-bar" style="border-top: 1px solid #222222; padding-top: 1.5rem; display: flex; justify-content: space-between; gap: 1.5rem; align-items: center;">
+            <div style="color: #666666; font-size: 0.85rem;">&copy; 2026 SpecV &nbsp;|&nbsp; Built for better business.</div>
+            <!-- Socials -->
+            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                <a href="#" style="color: #999999; text-decoration: none; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Instagram</a>
+                <a href="#" style="color: #999999; text-decoration: none; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">LinkedIn</a>
+                <a href="#" style="color: #999999; text-decoration: none; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Twitter</a>
+            </div>
+        </div>
+    </div>
+</footer>
 
     </div>
 
@@ -1217,8 +1259,57 @@
                         invalidateOnRefresh: true,
                     }
                 });
-            }
+                        }
+
+            // 6. Professional Fade In Animation
+            // Excluding hero and portfolio sections to prevent ScrollTrigger pinning conflicts
+            gsap.utils.toArray('.section:not(.hero_main):not(.portfolio_section)').forEach(section => {
+                gsap.from(section, {
+                    opacity: 0,
+                    duration: 1.5,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 90%",
+                        toggleActions: "play none none none"
+                    }
+                });
+                        });
         });
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
