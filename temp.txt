@@ -1,0 +1,120 @@
+                    <style>
+                        .sticky-steps-wrapper {
+                            position: relative;
+                            width: 100vw;
+                            margin-left: calc(-50vw + 50%);
+                        }
+                        .sticky-step {
+                            position: sticky;
+                            top: 0;
+                            height: 100vh;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            overflow: hidden;
+                        }
+                        .sticky-step video {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            z-index: 1;
+                        }
+                        .sticky-step .overlay {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: rgba(0,0,0,0.2);
+                            z-index: 2;
+                        }
+                        .sticky-step-content {
+                            position: relative;
+                            z-index: 3;
+                            background: rgba(0, 0, 0, 0.7);
+                            backdrop-filter: blur(10px);
+                            -webkit-backdrop-filter: blur(10px);
+                            color: white;
+                            padding: 3rem;
+                            max-width: 500px;
+                            margin-right: max(2rem, 10vw);
+                            border-radius: 8px;
+                            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+                        }
+                        .step-num {
+                            color: #FF5722; /* Orange accent like in image */
+                            font-family: var(--heading-font);
+                            font-size: 1.5rem;
+                            margin-right: 0.5rem;
+                        }
+                        .step-title {
+                            font-family: var(--heading-font);
+                            font-size: 1.8rem;
+                            margin-bottom: 1rem;
+                            display: inline-block;
+                        }
+                        .step-desc {
+                            font-family: var(--text-font);
+                            font-size: 1rem;
+                            line-height: 1.6;
+                            color: #E0E0E0;
+                        }
+                        @media screen and (max-width: 767px) {
+                            .sticky-step { justify-content: center; align-items: flex-end; padding-bottom: 4rem; }
+                            .sticky-step-content { margin: 0 1.5rem; max-width: 100%; padding: 2rem; }
+                        }
+                    </style>
+                    <div class="sticky-steps-wrapper">
+                        <!-- Step 1 -->
+                        <div class="sticky-step">
+                            <video src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay muted loop playsinline></video>
+                            <div class="overlay"></div>
+                            <div class="sticky-step-content">
+                                <div>
+                                    <span class="step-num">01.</span>
+                                    <span class="step-title">Discover</span>
+                                </div>
+                                <div class="step-desc">Understanding your requirements, feasibility analysis, and planning. We dive deep into your core hardware problems to ensure what we build is exactly what you need.</div>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="sticky-step">
+                            <video src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay muted loop playsinline></video>
+                            <div class="overlay"></div>
+                            <div class="sticky-step-content">
+                                <div>
+                                    <span class="step-num">02.</span>
+                                    <span class="step-title">Design</span>
+                                </div>
+                                <div class="step-desc">Creating schematics, PCB layouts, and 3D models for your product. Mechanisms, CAD, and design for manufacturing to kill the risk that it doesn't work.</div>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="sticky-step">
+                            <video src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay muted loop playsinline></video>
+                            <div class="overlay"></div>
+                            <div class="sticky-step-content">
+                                <div>
+                                    <span class="step-num">03.</span>
+                                    <span class="step-title">Develop</span>
+                                </div>
+                                <div class="step-desc">Prototyping, firmware coding, assembly, and rigorous testing. Built to fail in our workshop, not in your customer's hands.</div>
+                            </div>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="sticky-step">
+                            <video src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay muted loop playsinline></video>
+                            <div class="overlay"></div>
+                            <div class="sticky-step-content">
+                                <div>
+                                    <span class="step-num">04.</span>
+                                    <span class="step-title">Deliver</span>
+                                </div>
+                                <div class="step-desc">Handing over the final polished product with full documentation, vendor selection, QC, packaging, and certifications for mass manufacturing.</div>
+                            </div>
+                        </div>
+                    </div>
