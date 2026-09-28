@@ -56,13 +56,12 @@
         }
 
         .container.is-nav {
-            grid-column-gap: 1rem;
-            grid-row-gap: 1rem;
-            flex-flow: row;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
             align-items: center;
-            padding: 1.5rem 2rem;
-            display: flex;
+            padding: 1.5rem max(2rem, 5vw);
+            max-width: 1400px;
+            margin: 0 auto;
             width: 100%;
         }
 
@@ -99,6 +98,10 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
+        }
+
+        .nav-cta {
+            justify-self: end;
         }
 
         .w-nav-menu a:hover, .nav-cta:hover {
@@ -235,11 +238,11 @@
         }
 
         .btn-cta:hover {
-            color: #000080;
+            color: var(--blue);
         }
 
         .btn-cta:active {
-            color: #000080;
+            color: var(--blue);
         }
 
         /* --- TEAM SECTION --- */
@@ -290,7 +293,7 @@
         }
 
         .text-blue {
-            color: #000080;
+            color: var(--blue);
         }
 
         .team-subheading {
@@ -458,7 +461,10 @@
         @media screen and (max-width: 767px) {
             .footer-bottom-bar { flex-direction: column-reverse !important; align-items: flex-start !important; gap: 1rem !important; }
             body { font-size: 1.125rem; }
-            .container.is-nav { padding: 1rem 1.5rem; }
+            .container.is-nav { 
+                padding: 1rem 1.5rem; 
+                display: flex;
+            }
             .nav-element { min-height: 3.8rem; }
             .w-nav-menu, .nav-cta { display: none; }
             .hero_main.section { padding-top: 4rem; }
@@ -509,7 +515,7 @@
             font-family: var(--heading-font);
             font-size: clamp(5rem, 8vw, 8rem);
             font-weight: 400;
-            color: #000080;
+            color: var(--blue);
             line-height: 1;
             margin-bottom: 1.25rem;
         }
@@ -737,11 +743,8 @@
         <!-- HEADER (with fixed blur background) -->
         <div class="nav-element w-nav" id="site-header">
             <div class="container is-nav">
-                <a href="#" class="nav_logo">
-                    SpecV
-                    <svg class="logo-icon" viewBox="0 0 10 10">
-                        <path d="M0 0h10v10H5V5H0V0z" fill="#000"/>
-                    </svg>
+                <a href="#" class="nav_logo" style="align-items: center;">
+                    <img src="images/logo_transparent.png" alt="SpecV Logo" style="height: 2.4rem; display: block;">
                 </a>
                 <div class="w-nav-menu">
                     <a href="#">WORK</a>
@@ -1107,9 +1110,7 @@
             <div style="flex: 2; min-width: 280px; display: flex; flex-direction: column; gap: 1.25rem;">
                 <div style="font-family: var(--heading-font); font-size: 2rem; color: #ffffff; font-weight: 800; display: flex; align-items: center; cursor: default;">
                     SpecV
-                    <svg class="logo-icon" viewBox="0 0 10 10" style="width:16px; height:16px; margin-left:4px; vertical-align:middle;">
-                        <path d="M0 0h10v10H5V5H0V0z" fill="#000080"/>
-                    </svg>
+                    <img src="images/logo_transparent.png" alt="SpecV Logo" style="height: 2rem; margin-left: 0.5rem;">
                 </div>
                 <p style="color: #999999; font-size: 0.95rem; line-height: 1.6; max-width: 90%; margin: 0;">
                     End-to-end hardware design, firmware, and IoT connectivity for startups and students.
