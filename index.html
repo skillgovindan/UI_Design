@@ -10,14 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --body: #F7F7F7;
+            --body: #000;
             --text-font: 'Poppins', sans-serif;
-            --dark: #323232;
+            --dark: #fff;
             --heading-font: 'Space Grotesk', sans-serif;
-            --black: #000;
-            --gray: dimgrey;
+            --black: #fff;
+            --gray: #fff;
             
-            --blue: #000080;
+            --blue: #229EC0;
         }
 
         * {
@@ -94,7 +94,7 @@
             font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            color: var(--gray);
+            color: white;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
@@ -128,6 +128,9 @@
             padding-bottom: 0;
             display: flex;
             position: relative;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 100%), url('images/hero_pcb.jpg');
+            background-size: cover;
+            background-position: center;
         }
 
         .container.is-hero {
@@ -225,7 +228,7 @@
             padding: 0.85rem 1.75rem;
             border-radius: 0;
             border: none;
-            background: #fff;
+            background: #000;
             font-family: var(--text-font);
             font-size: 11px;
             text-transform: uppercase;
@@ -247,7 +250,7 @@
 
         /* --- TEAM SECTION --- */
         .team_section.section {
-            background-color: #FFFFFF; /* Pure white background for this section */
+            background-color: #000000; /* Pure white background for this section */
             padding: 8rem 2rem 6rem;
             display: flex;
             justify-content: flex-end;
@@ -307,7 +310,7 @@
 
         /* --- PORTFOLIO SECTION --- */
         .portfolio_section.section {
-            background-color: #FFFFFF;
+            background-color: #000000;
             width: 100%;
             overflow: hidden;
             padding: 0;
@@ -320,7 +323,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            background: #fff;
+            background: #000;
             padding-top: 2rem;
         }
 
@@ -345,7 +348,7 @@
             align-items: center;
             justify-content: center;
             background-color: var(--black);
-            color: #ffffff;
+            color: black;
             font-family: var(--text-font);
             font-size: 0.95rem;
             font-weight: 500;
@@ -359,7 +362,7 @@
 
         .btn-launch:hover {
             opacity: 0.8;
-            color: #ffffff;
+            color: black;
         }
         div.btn-launch:hover { opacity: 1; }
         div.btn-launch { cursor: default; }
@@ -383,7 +386,7 @@
         .portfolio-image-wrap {
             height: 70vh;
             width: 70vh;
-            background-color: #e8e8e8;
+            background-color: #000000;
             position: relative;
             display: flex;
             justify-content: center;
@@ -485,7 +488,7 @@
         }
         /* --- SERVICES GRID SECTION --- */
         .services-grid-section {
-            background-color: #ebebeb;
+            background-color: #000000;
             padding: 8rem 0;
         }
 
@@ -524,12 +527,12 @@
             font-family: var(--text-font);
             font-size: 1.1rem;
             line-height: 1.65;
-            color: #111111;
+            color: #ffffff;
         }
 
         .service-text strong {
             font-size: 1.1rem;
-            color: #111111;
+            color: #ffffff;
             font-weight: 700;
             display: block;
             margin-bottom: 0.25rem;
@@ -611,7 +614,7 @@
         .footer-desc {
             font-family: var(--heading-font);
             font-size: 1.1rem;
-            color: #888888;
+            color: #ffffff;
             line-height: 1.7;
             margin-bottom: 2.5rem;
             max-width: 85%;
@@ -649,7 +652,7 @@
             font-family: var(--heading-font);
             font-size: 1.15rem;
             font-weight: 500;
-            color: #bbbbbb;
+            color: #ffffff;
             text-decoration: none;
             margin-bottom: 1.25rem;
             transition: color 0.3s ease;
@@ -687,11 +690,11 @@
             padding-bottom: 2rem;
             font-family: var(--heading-font);
             font-size: 0.95rem;
-            color: #777777;
+            color: #ffffff;
         }
 
         .footer-legal a {
-            color: #777777;
+            color: #ffffff;
             text-decoration: none;
             margin-left: 2rem;
             transition: color 0.3s ease;
@@ -766,7 +769,7 @@
                             <!-- HEADINGS -->
                             <div class="hero_main_head">
                                 <div class="line-mask">
-                                    <h1 class="heading-main">FROM IDEA</h1>
+                                    <h1 class="heading-main" style="color: white;">FROM IDEA</h1>
                                 </div>
                                 <div class="line-mask">
                                     <h1 class="heading-main text-blue">TO IMPACT</h1>
@@ -775,7 +778,7 @@
 
                             <!-- SUB-HEADING & CTA -->
                             <div class="hero_main_content" id="hero-content">
-                                <p class="hero-subheading-text">
+                                <p class="hero-subheading-text" style="color: white;">
                                    SPECV Automations was founded to close the gap between academic engineering and industry-ready skills - and between great ideas and shipped products.
                                 </p>
                                 <a href="#" class="btn-cta">
@@ -867,7 +870,7 @@
                                 <div style="position: absolute; top: 1.5rem; right: 1.5rem; background: rgba(0,0,0,0.6); padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 700; color: white; z-index: 2; font-family: var(--heading-font); font-size: 0.9rem;">01</div>
                                 
                                 <div style="position: absolute; bottom: 2rem; left: 2rem; text-align: left; max-width: 85%; z-index: 2;">
-                                    <strong style="font-family: var(--heading-font); font-size: 1.4rem; font-weight: 800; text-transform: uppercase; display: block; margin-bottom: 0.75rem; color: #ffffff; letter-spacing: 0;">Electronics, Robotics and IoT Product development</strong>
+                                    <strong style="font-family: var(--heading-font); font-size: 1.4rem; font-weight: 800; text-transform: uppercase; display: block;  margin-bottom: 0.75rem; color: #ffffff; letter-spacing: 0;">Electronics, Robotics and IoT Product development</strong>
                                     <p style="font-family: var(--text-font); font-size: 0.95rem; margin: 0; text-transform: none; line-height: 1.5; color: #e0e0e0; font-weight: 400;">End-to-end hardware design, firmware, and IoT connectivity - from ideation to prototype.</p>
                                 </div>
                             </div>
@@ -879,7 +882,7 @@
                                 <div style="position: absolute; top: 1.5rem; right: 1.5rem; background: rgba(0,0,0,0.6); padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 700; color: white; z-index: 2; font-family: var(--heading-font); font-size: 0.9rem;">02</div>
                                 
                                 <div style="position: absolute; bottom: 2rem; left: 2rem; text-align: left; max-width: 85%; z-index: 2;">
-                                    <strong style="font-family: var(--heading-font); font-size: 1.4rem; font-weight: 800; text-transform: uppercase; display: block; margin-bottom: 0.75rem; color: #ffffff; letter-spacing: 0;">PCB designing and assembly</strong>
+                                    <strong style="font-family: var(--heading-font); font-size: 1.4rem; font-weight: 800; text-transform: uppercase; display: block;  margin-bottom: 0.75rem; color: #ffffff; letter-spacing: 0;">PCB designing and assembly</strong>
                                     <p style="font-family: var(--text-font); font-size: 0.95rem; margin: 0; text-transform: none; line-height: 1.5; color: #e0e0e0; font-weight: 400;">Professional PCB layout design, schematic capture, and full SMD assembly with quality inspection.</p>
                                 </div>
                             </div>
@@ -891,7 +894,7 @@
                                 <div style="position: absolute; top: 1.5rem; right: 1.5rem; background: rgba(0,0,0,0.6); padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 700; color: white; z-index: 2; font-family: var(--heading-font); font-size: 0.9rem;">03</div>
                                 
                                 <div style="position: absolute; bottom: 2rem; left: 2rem; text-align: left; max-width: 85%; z-index: 2;">
-                                    <strong style="font-family: var(--heading-font); font-size: 1.4rem; font-weight: 800; text-transform: uppercase; display: block; margin-bottom: 0.75rem; color: #ffffff; letter-spacing: 0;">3D designing, 3D printing</strong>
+                                    <strong style="font-family: var(--heading-font); font-size: 1.4rem; font-weight: 800; text-transform: uppercase; display: block;  margin-bottom: 0.75rem; color: #ffffff; letter-spacing: 0;">3D designing, 3D printing</strong>
                                     <p style="font-family: var(--text-font); font-size: 0.95rem; margin: 0; text-transform: none; line-height: 1.5; color: #e0e0e0; font-weight: 400;">Rapid prototyping and custom enclosure fabrication using advanced 3D modelling and printing.</p>
                                 </div>
                             </div>
@@ -903,7 +906,7 @@
                                 <div style="position: absolute; top: 1.5rem; right: 1.5rem; background: rgba(0,0,0,0.6); padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 700; color: white; z-index: 2; font-family: var(--heading-font); font-size: 0.9rem;">04</div>
                                 
                                 <div style="position: absolute; bottom: 2rem; left: 2rem; text-align: left; max-width: 85%; z-index: 2;">
-                                    <strong style="font-family: var(--heading-font); font-size: 1.4rem; font-weight: 800; text-transform: uppercase; display: block; margin-bottom: 0.75rem; color: #ffffff; letter-spacing: 0;">College project guidance</strong>
+                                    <strong style="font-family: var(--heading-font); font-size: 1.4rem; font-weight: 800; text-transform: uppercase; display: block;  margin-bottom: 0.75rem; color: #ffffff; letter-spacing: 0;">College project guidance</strong>
                                     <p style="font-family: var(--text-font); font-size: 0.95rem; margin: 0; text-transform: none; line-height: 1.5; color: #e0e0e0; font-weight: 400;">Comprehensive mentoring for final-year projects - from topic selection to report writing.</p>
                                 </div>
                             </div>
@@ -915,7 +918,7 @@
                                 <div style="position: absolute; top: 1.5rem; right: 1.5rem; background: rgba(0,0,0,0.6); padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 700; color: white; z-index: 2; font-family: var(--heading-font); font-size: 0.9rem;">05</div>
                                 
                                 <div style="position: absolute; bottom: 2rem; left: 2rem; text-align: left; max-width: 85%; z-index: 2;">
-                                    <strong style="font-family: var(--heading-font); font-size: 1.4rem; font-weight: 800; text-transform: uppercase; display: block; margin-bottom: 0.75rem; color: #ffffff; letter-spacing: 0;">Tech Courses</strong>
+                                    <strong style="font-family: var(--heading-font); font-size: 1.4rem; font-weight: 800; text-transform: uppercase; display: block;  margin-bottom: 0.75rem; color: #ffffff; letter-spacing: 0;">Tech Courses</strong>
                                     <p style="font-family: var(--text-font); font-size: 0.95rem; margin: 0; text-transform: none; line-height: 1.5; color: #e0e0e0; font-weight: 400;">Structured online and offline courses on Embedded Systems, Robotics, IoT, and PCB Design.</p>
                                 </div>
                             </div>
@@ -927,7 +930,7 @@
                                 <div style="position: absolute; top: 1.5rem; right: 1.5rem; background: rgba(0,0,0,0.6); padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 700; color: white; z-index: 2; font-family: var(--heading-font); font-size: 0.9rem;">06</div>
                                 
                                 <div style="position: absolute; bottom: 2rem; left: 2rem; text-align: left; max-width: 85%; z-index: 2;">
-                                    <strong style="font-family: var(--heading-font); font-size: 1.4rem; font-weight: 800; text-transform: uppercase; display: block; margin-bottom: 0.75rem; color: #ffffff; letter-spacing: 0;">Hands-on workshops</strong>
+                                    <strong style="font-family: var(--heading-font); font-size: 1.4rem; font-weight: 800; text-transform: uppercase; display: block;  margin-bottom: 0.75rem; color: #ffffff; letter-spacing: 0;">Hands-on workshops</strong>
                                     <p style="font-family: var(--text-font); font-size: 0.95rem; margin: 0; text-transform: none; line-height: 1.5; color: #e0e0e0; font-weight: 400;">Immersive workshops for colleges and corporates combining theory with real-world experience.</p>
                                 </div>
                             </div>
@@ -1013,7 +1016,7 @@
             </section>
             
             <!-- WHY PRODUCT GETS BUILT SECTION -->
-            <section class="manifesto_section section" style="padding: 12rem 0; background-color: #ffffff;">
+            <section class="manifesto_section section" style="padding: 12rem 0; background-color: #000000;">
                 <div class="container" style="padding: 0 max(2rem, 5vw);">
                     
                     <div style="display: flex; flex-direction: column; align-items: flex-end;">
@@ -1083,7 +1086,7 @@
 
 
             <!-- CTA STRATEGY SECTION -->
-            <section class="section manifesto_section" style="padding: 12rem 0; background-color: #ebebeb; background-image: radial-gradient(ellipse 60% 40% at 50% 100%, rgba(20, 85, 217, 0.15) 0%, rgba(235, 235, 235, 0) 100%);">
+            <section class="section manifesto_section" style="padding: 12rem 0; background-color: #000000; background-image: radial-gradient(ellipse 60% 40% at 50% 100%, rgba(20, 85, 217, 0.15) 0%, rgba(235, 235, 235, 0) 100%);">
                 <div class="container cta-grid" style="padding: 0 max(2rem, 5vw);">
                     
                     <!-- Left: Massive Text -->
@@ -1099,12 +1102,12 @@
 
                     <!-- Right: Text & Button -->
                     <div class="cta-right-col" style="max-width: 500px;">
-                        <p style="font-family: var(--text-font); font-size: 1.15rem; color: #555555; line-height: 1.6; margin-bottom: 3rem;">
+                        <p style="font-family: var(--text-font); font-size: clamp(1rem, 2vw, 1.15rem); color: white; line-height: 1.6; margin-bottom: 3rem;">
                             Have an idea, challenge, or project in mind? At SPECV Automations, we're always ready to listen and create solutions that fit your needs.
                         </p>
                         <a href="#" class="btn-launch">CONNECT WITH US
                             <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 0.75rem;">
-                                <path d="M14 0H4V3H9.5L0 12.5L1.5 14L11 4.5V10H14V0Z" fill="white"/>
+                                <path d="M14 0H4V3H9.5L0 12.5L1.5 14L11 4.5V10H14V0Z" fill="black"/>
                             </svg>
                         </a>
                     </div>
@@ -1130,11 +1133,11 @@
         .intro_text_section {
             padding-top: 8rem;
             padding-bottom: 2rem;
-            background: #fff;
+            background: #000;
         }
         .stats_section {
             padding: 6rem 0 10rem 0;
-            background-color: #fff;
+            background-color: #000000;
         }
         @media screen and (max-width: 767px) {
             .intro_text_section {
@@ -1334,17 +1337,40 @@
                 }
             });
 
-            gsap.from('.stat-item', {
-                y: 40,
-                opacity: 0,
-                duration: 1,
-                stagger: 0.2,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: '.stats_section',
-                    start: "top 85%",
-                    toggleActions: "play none none none"
-                }
+            gsap.utils.toArray('.stat-item').forEach((item, index) => {
+                gsap.from(item, {
+                    y: 40,
+                    opacity: 0,
+                    duration: 1,
+                    delay: index * 0.2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: '.stats_section',
+                        start: "top 85%",
+                        toggleActions: "play none none none"
+                    }
+                });
+
+                const numberEl = item.querySelector('div:first-child');
+                const targetText = numberEl.innerText;
+                const targetNumber = parseInt(targetText.replace(/\D/g, ''));
+                const suffix = targetText.replace(/[0-9]/g, '');
+                
+                let obj = { val: 0 };
+                gsap.to(obj, {
+                    val: targetNumber,
+                    duration: 2,
+                    delay: index * 0.2,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: '.stats_section',
+                        start: "top 85%",
+                        toggleActions: "play none none none"
+                    },
+                    onUpdate: function() {
+                        numberEl.innerHTML = Math.floor(obj.val) + suffix;
+                    }
+                });
             });
         });
     </script>
