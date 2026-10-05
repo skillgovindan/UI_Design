@@ -740,6 +740,16 @@
             color: var(--blue) !important;
         }
 
+        .why-video-stack > div > div:first-child > div {
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.28) 100%) !important;
+        }
+
+        .why-video-stack > div > div:nth-child(2) {
+            background-color: rgba(18, 18, 20, 0.38) !important;
+            -webkit-backdrop-filter: none !important;
+            backdrop-filter: none !important;
+        }
+
         .why-video-stack > div:nth-child(1) { z-index: 1; }
         .why-video-stack > div:nth-child(2) { z-index: 2; }
         .why-video-stack > div:nth-child(3) { z-index: 3; }
@@ -1102,7 +1112,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div style="grid-column: 1 / -1; width: 100vw; height: 100vh; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; overflow: hidden; display: flex; align-items: center; justify-content: flex-end; padding: 5%; background-color: #0b0b0d;">
+                            <div class="tools-tech-panel" style="grid-column: 1 / -1; width: 100vw; height: 100vh; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; overflow: hidden; display: flex; align-items: center; justify-content: flex-end; padding: 5%; background-color: #0b0b0d;">
                                 <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
                                     <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; display: block;">
                                         <source src="videos/tools-technology.mp4" type="video/mp4" />
