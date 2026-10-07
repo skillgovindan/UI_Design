@@ -38,8 +38,8 @@
         /* --- NAVIGATION (WITH BLUR) --- */
         .nav-element {
             z-index: 99;
-            -webkit-backdrop-filter: blur(7px);
-            backdrop-filter: blur(7px);
+            -webkit-backdrop-filter: blur(14px);
+            backdrop-filter: blur(14px);
             background-color: #fafafa08;
             width: 100%;
             min-height: 5.5rem;
@@ -48,7 +48,12 @@
             opacity: 0; /* GSAP initial state */
             display: flex;
             align-items: center;
-            transition: transform 0.3s ease-in-out;
+            transition: background-color 0.3s ease, transform 0.3s ease-in-out;
+        }
+
+        .nav-element.nav-scrolled {
+            background-color: rgba(8, 8, 10, 0.88);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .nav-hidden {
@@ -106,6 +111,12 @@
 
         .w-nav-menu a:hover, .nav-cta:hover {
             color: var(--black);
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid var(--blue);
+            outline-offset: 4px;
         }
 
         /* --- MAIN HERO --- */
@@ -239,15 +250,17 @@
             font-weight: 500;
             text-decoration: none;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
         }
 
         .btn-cta:hover {
             color: var(--blue);
+            transform: translateY(-2px);
         }
 
         .btn-cta:active {
             color: var(--blue);
+            transform: translateY(0);
         }
 
         .btn-cta .text-blue {
@@ -367,15 +380,21 @@
             padding: 1rem 1.75rem;
             text-decoration: none;
             gap: 0.75rem;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.3s ease, color 0.3s ease, transform 0.3s ease;
         }
 
         .btn-launch:hover {
             opacity: 0.8;
             color: black;
+            transform: translateY(-2px);
         }
         div.btn-launch:hover { opacity: 1; }
         div.btn-launch { cursor: default; }
+
+        .btn-launch,
+        .btn-cta {
+            transform: translateZ(0);
+        }
 
         .portfolio-track {
             display: flex;
@@ -485,7 +504,12 @@
             .hero_main_head { padding-bottom: 1.5rem; }
             .heading-main { font-size: 4.125rem; }
             .hero_main_content { grid-column-gap: 1.5rem; grid-row-gap: 1.5rem; margin-top: 0; }
-            .hero-subheading-text { font-size: 1rem; }
+            .hero-subheading-text {
+                width: 100%;
+                max-width: 560px;
+                padding: 0 1.5rem;
+                font-size: 1rem;
+            }
             
             .portfolio-image-wrap {
                 width: 85vw;
@@ -1329,8 +1353,10 @@
             // Navbar Scroll Behavior
             let lastScrollY = window.scrollY;
             const nav = document.getElementById("site-header");
-            
-            window.addEventListener("scroll", () => {
+
+            const updateNavigation = () => {
+                nav.classList.toggle("nav-scrolled", window.scrollY > 40);
+
                 if (window.scrollY > lastScrollY && window.scrollY > 80) {
                     // Scrolling down & past the top threshold
                     nav.classList.add("nav-hidden");
@@ -1339,7 +1365,10 @@
                     nav.classList.remove("nav-hidden");
                 }
                 lastScrollY = window.scrollY;
-            }, { passive: true });
+            };
+
+            updateNavigation();
+            window.addEventListener("scroll", updateNavigation, { passive: true });
 
             // 4. Team & Manifesto Section Intersection Observer
             const teamObserver = new IntersectionObserver((entries) => {
