@@ -1,0 +1,121 @@
+:root {
+  /* Literal variables already used by the landing page. */
+  --body: #000;
+  --text-font: 'Poppins', sans-serif;
+  --dark: #fff;
+  --heading-font: 'Space Grotesk', sans-serif;
+  --black: #fff;
+  --gray: #fff;
+  --blue: #229EC0;
+
+  /* Role aliases inferred from source declarations. Values are source-derived. */
+  --color-canvas: #000000;
+  --color-text-primary: #ffffff;
+  --color-text-muted: #999999;
+  --color-text-subtle: #666666;
+  --color-text-portfolio: #e0e0e0;
+  --color-accent: #229EC0;
+  --color-border: #222222;
+  --color-border-soft: rgba(255, 255, 255, 0.08);
+  --color-border-card: rgba(255, 255, 255, 0.12);
+  --color-surface-video: #0b0b0d;
+  --color-surface-card: rgba(18, 18, 20, 0.38);
+  --color-header-glass: #fafafa08;
+  --color-header-scrolled: rgba(8, 8, 10, 0.88);
+  --color-overlay-label: rgba(0, 0, 0, 0.6);
+
+  /* Typography aliases. Keep clamp expressions to preserve authored scaling. */
+  --font-body: var(--text-font);
+  --font-display: var(--heading-font);
+  --font-size-nav: 12px;
+  --font-size-footer-heading: 0.9rem;
+  --font-size-small: 0.95rem;
+  --font-size-body: 1rem;
+  --font-size-copy: 1.1rem;
+  --font-size-lead: 1.125rem;
+  --font-size-heading: 2.5rem;
+  --font-size-hero: clamp(6rem, 18vw, 24rem);
+  --font-size-hero-mobile: 4.125rem;
+  --font-size-team-heading: clamp(3rem, 6.5vw, 8.5rem);
+  --font-size-service-number: clamp(5rem, 8vw, 8rem);
+  --font-size-cta-heading: clamp(3.5rem, 8vw, 8rem);
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-heavy: 800;
+  --line-height-display: 0.8;
+  --line-height-heading: 1;
+  --line-height-copy: 1.6;
+  --tracking-nav: 0.1em;
+  --tracking-label: 0.05em;
+
+  /* Spacing aliases inferred from authored spacing values, not a strict scale. */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 1.75rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --space-28: 7rem;
+  --space-32: 8rem;
+  --space-40: 10rem;
+  --space-48: 12rem;
+  --space-60: 15rem;
+  --space-80: 20rem;
+  --gutter-page: max(2rem, 5vw);
+  --gutter-content: max(1.5rem, 5vw);
+
+  /* Observed maximum widths, named by approximate use. */
+  --container-header: 1400px;
+  --container-portfolio-copy: 1300px;
+  --container-media: 1200px;
+  --container-grid: 1000px;
+  --container-copy: 900px;
+  --container-intro-copy: 600px;
+  --container-card-copy: 500px;
+  --container-hero-copy: 560px;
+
+  /* Observed radii and elevation. */
+  --radius-button: 0;
+  --radius-media: 1.25rem;
+  --radius-copy-card: 18px;
+  --radius-badge: 20px;
+  --shadow-copy-card: 0 25px 50px rgba(0, 0, 0, 0.5);
+  --focus-outline: 2px solid var(--color-accent);
+  --focus-outline-offset: 4px;
+
+  /* Source breakpoints. Custom properties cannot be substituted into media queries. */
+  --breakpoint-mobile-max: 767px;
+  --breakpoint-tablet-max: 991px;
+  --breakpoint-desktop-min: 992px;
+
+  /* Source motion timings. */
+  --duration-quick: 0.2s;
+  --duration-standard: 0.3s;
+  --duration-image: 0.6s;
+  --ease-standard: ease;
+  --ease-in-out: ease-in-out;
+
+  /* Source-derived background treatments. */
+  --gradient-hero-fade: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  --gradient-video-overlay: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0.28) 100%
+  );
+  --gradient-cta-glow: radial-gradient(
+    ellipse 60% 40% at 50% 100%,
+    rgba(20, 85, 217, 0.15) 0%,
+    rgba(235, 235, 235, 0) 100%
+  );
+}
