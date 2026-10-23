@@ -878,6 +878,161 @@
                 gap: 4rem;
             }
         }
+
+        @media screen and (max-width: 767px) {
+            .container.is-nav {
+                justify-content: space-between;
+                gap: 0.75rem;
+                padding: 0.75rem 1rem;
+            }
+
+            .nav-element {
+                min-height: 4rem;
+            }
+
+            .nav_logo img {
+                height: 2rem !important;
+            }
+
+            .w-nav-menu {
+                display: flex;
+                flex: 1;
+                justify-content: flex-end;
+                gap: clamp(0.3rem, 1.5vw, 0.6rem);
+                min-width: 0;
+            }
+
+            .w-nav-menu a {
+                font-size: clamp(0.5rem, 2.4vw, 0.6rem);
+                letter-spacing: 0.025em;
+                white-space: nowrap;
+            }
+
+            .hero_main.section {
+                padding-top: 4rem;
+            }
+
+            .hero_main_wrap {
+                height: auto;
+                min-height: calc(100svh - 4rem);
+                padding: 2rem 0 3rem;
+            }
+
+            .heading-main {
+                font-size: clamp(2.7rem, 12.5vw, 4rem);
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .team_section.section {
+                padding: 5rem 1.25rem 4rem;
+            }
+
+            .team-heading {
+                font-size: clamp(2.25rem, 9vw, 3.5rem);
+                margin-bottom: 4rem;
+            }
+
+            .portfolio-header-fixed {
+                margin-bottom: 1.5rem !important;
+            }
+
+            .portfolio-header-fixed h2 {
+                font-size: clamp(1.8rem, 8vw, 2.25rem) !important;
+            }
+
+            .portfolio-image-wrap {
+                width: min(85vw, 28rem);
+                height: min(85vw, 28rem);
+                padding: 1rem;
+            }
+
+            .portfolio-image-wrap > div:first-of-type {
+                top: 1rem !important;
+                right: 1rem !important;
+            }
+
+            .portfolio-image-wrap > div:last-child {
+                right: 1rem;
+                bottom: 1rem !important;
+                left: 1rem !important;
+                max-width: none !important;
+            }
+
+            .portfolio-image-wrap > div:last-child strong {
+                font-size: clamp(1rem, 5vw, 1.3rem) !important;
+                line-height: 1.15;
+                margin-bottom: 0.45rem !important;
+            }
+
+            .portfolio-image-wrap > div:last-child p {
+                font-size: 0.8rem !important;
+            }
+
+            .services-grid-section {
+                padding: 5rem 0;
+            }
+
+            .services-grid {
+                gap: 3rem;
+            }
+
+            .why-video-stack > div {
+                min-height: 100svh;
+                padding: 1.25rem;
+            }
+
+            .video-copy,
+            .video-copy.right,
+            .video-copy.left {
+                margin-left: 0;
+                margin-right: 0;
+                padding: 1.25rem;
+                border-radius: 12px;
+            }
+
+            .video-copy strong {
+                font-size: clamp(1.45rem, 7vw, 2rem);
+            }
+
+            section.manifesto_section {
+                padding: 6rem 0 4rem !important;
+            }
+
+            .manifesto_section > .container:not(.cta-grid) > .team-heading {
+                transform: none;
+                row-gap: 0.65rem !important;
+            }
+
+            .manifesto_section > .container:not(.cta-grid) .team-line {
+                font-size: clamp(2.8rem, 14vw, 4rem) !important;
+                line-height: 0.95 !important;
+                letter-spacing: 0 !important;
+            }
+
+            .cta-grid {
+                gap: 2.5rem;
+            }
+
+            .cta-grid h2 {
+                font-size: clamp(2.25rem, 10.5vw, 3rem) !important;
+                gap: 0.55rem !important;
+            }
+
+            .cta-right-col {
+                max-width: none !important;
+            }
+
+            .btn-cta,
+            .btn-launch {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .footer-columns > div {
+                min-width: 0 !important;
+            }
+        }
     </style>
 </head>
 <body class="body">
